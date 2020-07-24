@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #29303B;
+  color: #fff;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -105,7 +105,7 @@ h6 {
   font-size: 13px;
 }
 a {  
-  color: #0284A2;
+  color: #ce041c;
   font-size: 14px;
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -115,7 +115,7 @@ a {
 }
 a:hover, 
 a:focus {
-  color: #003845;
+  color: #fff;
   text-decoration: none;
 }
 a:active {
@@ -160,7 +160,7 @@ ul {
 }
 .btn-primary { 
   padding: 20px 25px;
-  background-color: #F44A4A;
+  background-color: #000000;
   color: #FFF;
   font-size: 15px;
   font-weight: 400;
@@ -176,12 +176,12 @@ ul {
 }
 .btn-primary:hover {
   border: 1px solid transparent;
-  background-color: #992337;
+  background-color: #ce041c;
 }
 .btn-secondary { 
   padding: 15px 25px;
-  background-color: #FFF;
-  color: #686F7A;
+  background-color: #000000;
+  color: #fff;
   font-size: 15px;
   border: 1px solid #686F7A;
   -webkit-transition: none;
@@ -195,7 +195,7 @@ ul {
 }
 .btn-secondary:hover {
   border: 1px solid #29303B;
-  background-color: #FFF;
+  background-color: #ce041c;
   color: #29303B;
 }
 .btn-info { 
@@ -279,8 +279,9 @@ ul {
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev { 
   position: absolute;
-  color: #0284A2;
-  background-color: #FFF;
+  color: #212529;
+  
+  background-color: #ce041c;
   border-radius: 50%;
   box-shadow: 0 0 1px 1px rgba(20,23,28,0.1); 
   font-size: 24px;
@@ -627,6 +628,7 @@ sup.redstar {
 .nav-bar-main-block {
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.08);
+ background-color: #000000;
 }
 .nav-search .form-control {
   padding: 13px 0 13px 20px;
@@ -836,8 +838,13 @@ sup.redstar {
 /* ================================= 
     /*===== Work =====*/
 /* ================================= */
+
+.learning-work-icon {
+    color: #ce041c;
+}
 .learning-work-main-block {
-  background: linear-gradient(-45deg, #F44A4A 0, #6E1A52 100%);
+/*  background: linear-gradient(-45deg, #ce041c 0, #212529 100%);*/
+background-color: #212529;
   padding: 10px 0;
 }
 .work-heading {
@@ -867,12 +874,16 @@ sup.redstar {
 /* ================================= 
     /*===== Courses =====*/
 /* ================================= */
+section#learning-courses {
+    background-color: black;
+}
 .learning-courses-main-block {
   padding: 40px 0; 
 }
 .learning-selection {
   padding: 148px 20px;
-  background: #F7F8FA;
+  background: #212529;
+  color:#fff;
   margin-bottom: 30px;
 }
 .selection-heading {
@@ -918,7 +929,7 @@ sup.redstar {
 }
 .learning-courses .nav-link.active {
   border: none;
-  border-bottom: 5px solid #0284A2;
+  border-bottom: 5px solid #ce041c;
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -926,7 +937,7 @@ sup.redstar {
   transition: all 0.5s ease;
 }
 .learning-courses .nav-tabs .nav-link:hover {
-    border-color: #0284A2 #0284A2 #0284A2;
+    border-color: #ce041c #ce041c #ce041c;
 }
 .learning-courses-main-block .owl-carousel .owl-nav button.owl-prev  {
   margin-right: 36px;
@@ -960,13 +971,14 @@ sup.redstar {
   margin-bottom: 50px;
 }
 .student-heading {
-  color: #505763;
+  color: #fff;
 }
 .view-dtl {
   padding: 10px;
   border: 1px solid #DEDFE0;
   border-radius: 0;
   height: 150px;
+  background-color: #212529;
   box-shadow: 0 0 1px 1px rgba(20,23,28,0.1), 0 3px 1px 0 rgba(20,23,28,0.1);
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -1006,16 +1018,16 @@ sup.redstar {
 }
 .view-heading a {
   font-size: 16px;
-  color: #29303B;
+  color: #fff;
   font-weight: 500;
 }
 .view-dtl p {
   font-size: 8px;
-  color: #686F7A;
+  color: #fff;
 }
 .view-dtl .rating ul li {
   display: inline-flex;
-  color: #505763;
+  color: #fff;
   font-size: 14px;
   vertical-align: text-bottom;
 }
@@ -1060,7 +1072,7 @@ sup.redstar {
 /* ================================= */
 .border-recommendation .top-border {
   background: linear-gradient(-45deg, #F44A4A 0, #6E1A52 100%);
-  height: 8px;
+ /* height: 8px;*/
 }
 .recommendation-main-block {
   padding: 105px 0;
@@ -1079,10 +1091,11 @@ sup.redstar {
     /*===== Categories =====*/
 /* ================================= */
 .categories-main-block {
+  background-color: #212529;
   padding: 50px 0;
 }
 .categories-block a {
-  color: #14171C;
+  color: #fff;
   font-size: 15px;
 }
 .categories-block i {
@@ -1121,7 +1134,7 @@ sup.redstar {
     /*===== Testimonial =====*/
 /* ================================= */
 .testimonial-main-block {
-  background-color: #F7F8FA;
+  background-color: #000000;
   padding: 50px 0 20px;
 }
 .testimonial-slider-main-block.owl-carousel .owl-item .testimonial-block img {
@@ -1131,7 +1144,8 @@ sup.redstar {
   margin-right: 20px;
 } 
 .testimonial-block {
-  background-color: #FFF;
+  background-color: #212529;
+  color:#fff;
   padding: 30px;
   box-shadow: 0 0 1px 1px rgba(20,23,28,.1),
 }
@@ -1156,7 +1170,7 @@ sup.redstar {
 }
 
 .trusted-main-block {
-  background-color: #F7F8FA;
+  background-color: #000000;
   padding: 10px 0 10px;
 }
 .patners-block {
@@ -1212,7 +1226,7 @@ sup.redstar {
   padding: 30px 0 10px;
 }
 .widget {
-  color: #0284A2;
+  color: #fff;
   margin-bottom: 10px;
 }
 .footer-link ul li {
@@ -1270,7 +1284,7 @@ sup.redstar {
 }
 .tiny-footer {
   padding: 20px 20px 30px;
-  border-bottom: 5px solid #F44A4A;
+  border-bottom: 5px solid #ce041c;
 }
 .tiny-footer ul {
   margin-bottom: 0;
@@ -1278,7 +1292,7 @@ sup.redstar {
 .logo-footer ul li {
   display: inline-block;
   margin-right: 10px;
-  color: #686F7A;
+  color: #fff;
   vertical-align: middle;
 }
 .logo-footer img {
@@ -2606,15 +2620,18 @@ sup.redstar {
     /*===== Category-Page =====*/
 /* ================================= */
 .categories-tab-main-block {
-  background-color: #F7F8FA;
-  border-top: 1px solid #DEDFE0;
+      background-color: #212529;
+    padding-top: 20px;
+    color:#fff;
+    padding-bottom: 20px;
+    border-top: 1px solid #212529;
 }
 .categories-tab-dtl {
   padding: 10px 5px; 
   text-align: center;
 }
 .categories-tab-block a {
-  color: #686F7A;
+  color: #fff;
 }
 .categories-tab-block i {
   -webkit-text-stroke: 1px #686F7A;
@@ -2622,7 +2639,7 @@ sup.redstar {
   margin-right: 8px;
 }
 .categories-tab-dtl:hover {
-  background-color: #E8E9EB;
+  background-color: #ce041c;
 }
 .learning-courses-main-block-one {
   padding: 200px 0 40px;
@@ -5998,7 +6015,7 @@ ul {
 /* ================================ */
 .protip-skin-default--scheme-pro.protip-container {
   height: auto !important;
-  background-color: #FFF !important;
+  background-color: #212529 !important;
   box-shadow: 0 4px 16px rgba(20,23,28,.25)!important;
   padding: 15px !important;
   -webkit-border-radius: 2px !important;
@@ -6035,7 +6052,7 @@ ul {
   font-size: 19px;
   font-weight: 500;
   margin-bottom: 5px;
-  color: #000;
+  color: #fff;
   margin-bottom: 10px;
 }
 .protip-content .description-heading {
@@ -6055,7 +6072,7 @@ ul {
 .protip-content .description-list li,
 .prime-description-block .description-list li {
   display: inline-block !important;
-  color: #686F7A;
+  color: #fff;
   margin: 0 5px;
   font-size: 12px;
   font-weight: 500;
@@ -6091,7 +6108,7 @@ ul {
   letter-spacing: 0.2px;
   margin: 0;
   line-height: 1.2;
-  color: #000;
+  color: #fff;
 }
 .protip-content .main-des a,
 .prime-description-block .main-des a {
@@ -7722,4 +7739,63 @@ input.razorpay-payment-button {
 /* ===================================== */
 .refund-main-block {
   padding: 60px 0;
+}
+
+
+footer#footer {
+    background-color: #212529;
+}
+
+
+section.secdule{
+  background-color: black;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.col-lg-4.masters {
+    color: #fff;
+    background-color: #212529;
+           padding-top: 40px;
+    border: #000000;
+    border-style: solid;
+    border-width: 7px;
+    width: 30px;
+}
+.col-lg-4.lecture {
+    color: #fff;
+    background-color: #212529;
+            padding-top: 40px;
+    border: #000000;
+    border-style: solid;
+    border-width: 7px;
+    width: 30px;
+}
+.col-lg-4.class {
+    background-color: #212529;
+   color: #fff;
+            padding-top: 40px;
+    border: #000000;
+    border-style: solid;
+    border-width: 7px;
+    width: 30px;
+}
+section#border-recommendation {
+    background-color: #212529;
+    text-align: center;
+    padding-top: 20px;
+      padding-bottom: 20px;
+}
+section.video{
+
+text-align: center;
+padding-top: 30px;
+      padding-bottom: 30px;
+  background-color: #000000;
+}
+section#student {
+    background-color: #000000;
+}
+#learning-work 
+{
+padding:40px !important;
 }

@@ -6,17 +6,38 @@
 <!-- categories-tab start-->
 <section id="categories-tab" class="categories-tab-main-block">
     <div class="container">
-        <div id="categories-tab-slider" class="categories-tab-block owl-carousel">
+        <div class="row">
+        <div class="col-md-3">
+              <!-- <div class="logo">
+                            @php
+                                $setting = App\Setting::first();
+                            @endphp
+
+                            @if($setting->logo_type == 'L')
+                                <a href="{{ url('/') }}" ><img src="{{ asset('images/logo/'.$setting->logo) }}" class="img-fluid" alt="logo"></a>
+                            @else()
+                                <a href="{{ url('/') }}"><b><div class="logotext">{{ $setting->project_title }}</div></b></a>
+                            @endif
+                        </div>
+                    </div> -->
+
+        </div>
+        <div class="col-md-9">
+            <div id="categories-tab-slider" class="categories-tab-block owl-carousel">
             @php
                 $category = App\Categories::orderBy('position','ASC')->get();
             @endphp
             @foreach($category as $cat)
                 @if($cat->status == 1)
                 <div class="item categories-tab-dtl">
-                    <a href="{{ route('category.page',$cat->id) }}" title="{{ $cat->title }}"><i class="fa {{ $cat->icon }}"></i>{{ $cat->title }}</a>
+                  <!--   <i class="fa {{ $cat->icon }}"></i> -->
+                    <a href="{{ route('category.page',$cat->id) }}" title="{{ $cat->title }}">{{ $cat->title }}</a>
                 </div>
                 @endif
             @endforeach
+        </div>
+        </div>
+
         </div>
     </div>
 </section>
@@ -140,6 +161,62 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 </section>
 @endif
 <!-- learning-courses end -->
+<section class="secdule">
+    <div class="container">
+        <div class="row" >
+            <div class="col-lg-4 masters">
+                <h2>100+</h2>
+              Classes
+              <p>From the masters</p>
+                       </div>
+            <div class="col-lg-4 lecture">
+                <h2>25</h2>
+                Lessons
+                <p>Average per lecture</p>
+            </div>
+            <div class="col-lg-4 class">
+                <h2>15</h2>
+                Minutes
+                <p>Average per class</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<!-- recommendations start -->
+<section id="border-recommendation" class="border-recommendation">
+    @php
+        $gets = App\GetStarted::first();
+    @endphp
+    @if(isset($gets)) 
+    <div class="top-border"></div>
+    <!-- <div class="recommendation-main-block  text-center" style="background-image: url('{{ asset('images/getstarted/'.$gets['image']) }}')"> -->
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+            <h3 class="text-white">{{ $gets['heading'] }}</h3>
+            <p class="text-white btm-20">{{ $gets['sub_heading'] }}</p>
+            @if($gets->button_txt == !NULL)
+            <div class="recommendation-btn text-white">
+                <a href="{{ url('/') }}" class="btn btn-primary " title="search">{{ $gets['button_txt'] }}</a>
+            </div>
+            @endif
+            </div>
+            </div> 
+        </div>
+   <!--  </div> -->
+    @endif
+</section>
+<!-- recommendations end -->
+ <section class="video">
+<div class="container">
+  <h2>Our online classes</h2>
+
+ <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+</div>
+</div>
+</section>
 <!-- Student start -->
 <section id="student" class="student-main-block">
     <div class="container">
@@ -791,27 +868,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 </section>
 @endif
 <!-- Bundle end -->
-<!-- recommendations start -->
-<section id="border-recommendation" class="border-recommendation">
-    @php
-        $gets = App\GetStarted::first();
-    @endphp
-    @if(isset($gets)) 
-    <div class="top-border"></div>
-    <div class="recommendation-main-block  text-center" style="background-image: url('{{ asset('images/getstarted/'.$gets['image']) }}')">
-        <div class="container">
-            <h3 class="text-white">{{ $gets['heading'] }}</h3>
-            <p class="text-white btm-20">{{ $gets['sub_heading'] }}</p>
-            @if($gets->button_txt == !NULL)
-            <div class="recommendation-btn text-white">
-                <a href="{{ url('/') }}" class="btn btn-primary " title="search">{{ $gets['button_txt'] }}</a>
-            </div>
-            @endif 
-        </div>
-    </div>
-    @endif
-</section>
-<!-- recommendations end -->
+
 <!-- categories start -->
 @php
     $topcats = App\Categories::orderBy('position', 'ASC')->get();
@@ -935,3 +992,4 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 </script>
 
 @endsection
+

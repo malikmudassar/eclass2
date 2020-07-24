@@ -50,7 +50,10 @@
   font-size: 14px;
   letter-spacing: 0.3px;
   text-decoration: none;
-  color: #505763;
+  color: #fff;
+  background-color:#ce041c;
+    padding-bottom: 5px;
+    padding-right: 20px;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   font-family: 'Poppins', sans-serif;
@@ -79,7 +82,7 @@
   transition: all 0.5s ease;
 }
 #cssmenu > ul > li.has-sub :hover  > a {
-  color: #0284A2;
+  color: #ce041c;
 }
 /*
 #cssmenu > ul > li.has-sub > a:after {
@@ -149,9 +152,9 @@
   width: 310px;
   font-size: 15px;
   text-decoration: none;
-  color: #29303B;
+  color: #fff;
   font-weight: 400;
-  background: #FFF;
+  background: #212529;
   z-index: 111111111111; 
   -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
@@ -161,8 +164,8 @@
 }
 #cssmenu ul ul li:hover > a,
 #cssmenu ul ul li a:hover {
-  color: #0284A2;
-  background-color: #F2F3F5;
+  color: #ce041c;
+  background-color: #212529;
 }
 /*#cssmenu ul ul li.has-sub > a:after {
   position: absolute;

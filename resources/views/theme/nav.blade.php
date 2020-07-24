@@ -223,7 +223,7 @@
         <div class="row smallscreen-search-block">
             <div class="col-lg-5">
                 <div class="row">
-                    <div class="col-lg-6 col-md-4 col-sm-12">
+                    <!-- <div class="col-lg-6 col-md-4 col-sm-12">
                         <div class="logo">
                             @php
                                 $setting = App\Setting::first();
@@ -235,7 +235,7 @@
                                 <a href="{{ url('/') }}"><b><div class="logotext">{{ $setting->project_title }}</div></b></a>
                             @endif
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-6 col-md-4 col-sm-12">
                         <div class="navigation">
                             <div id="cssmenu">
@@ -280,16 +280,16 @@
             <div class="col-lg-7">
                 @guest
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                     <div class="col-lg-6 col-md-6">
                         <div class="learning-business">
                             @if($setting->instructor_enable == 1)
                                 <a href="{{ route('login') }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Login/Register To Become an Instructor">{{ __('frontstaticword.BecomeAnInstructor') }}</a>
                             @endif
                         </div>
-                    </div>
+                    </div> 
                     <div class="col-lg-6 col-md-6">
                         <div class="Login-btn">
-                            <a href="#find" class="nav-search nav-wishlist"><i class="fa fa-search"></i></a>
+                           <!--  <a href="#find" class="nav-search nav-wishlist"><i class="fa fa-search"></i></a> -->
                             <a href="{{ route('register') }}" class="btn btn-primary" title="register">{{ __('frontstaticword.Signup') }}</a>
                             <a href="{{ route('login') }}" class="btn btn-secondary" title="login">{{ __('frontstaticword.Login') }}</a>
                         </div> 
@@ -527,4 +527,5 @@ function closeNav() {
 @endsection
 
 @include('instructormodel')
+
 
