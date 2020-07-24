@@ -259,5 +259,8 @@ return [
     'RequestAppointment' => 'Request Appointment',
     'User' => 'User',
     'Response' => 'Response',
-    'LiveMeetings' => 'Live Meetings'
+    'LiveMeetings' => 'Live Meetings',
+    'Register' => 'Register',
+    'EnrollNow' => 'Enroll Now',
+    'GetStarted' => 'Get Started',
 ];

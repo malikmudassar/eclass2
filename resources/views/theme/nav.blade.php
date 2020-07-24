@@ -221,7 +221,7 @@
         
         <!-- end navigation -->
         <div class="row smallscreen-search-block">
-            <div class="col-lg-5">
+            <div class="col-lg-3">
                 <div class="row">
                     <!-- <div class="col-lg-6 col-md-4 col-sm-12">
                         <div class="logo">
@@ -232,7 +232,11 @@
                             @if($setting->logo_type == 'L')
                                 <a href="{{ url('/') }}" ><img src="{{ asset('images/logo/'.$setting->logo) }}" class="img-fluid" alt="logo"></a>
                             @else()
-                                <a href="{{ url('/') }}"><b><div class="logotext">{{ $setting->project_title }}</div></b></a>
+                                <a href="{{ url('/') }}">
+                                    <b>
+                                        <div class="logotext">{{ $setting->project_title }}</div>
+                                    </b>
+                                </a>
                             @endif
                         </div>
                     </div> -->
@@ -277,23 +281,44 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-9">
                 @guest
                 <div class="row">
-                     <div class="col-lg-6 col-md-6">
-                        <div class="learning-business">
-                            @if($setting->instructor_enable == 1)
-                                <a href="{{ route('login') }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Login/Register To Become an Instructor">{{ __('frontstaticword.BecomeAnInstructor') }}</a>
-                            @endif
+                    <div class="col-lg-8 col-md-8 d-flex justify-content-center align-items-center">
+                        <div class="px-4">
+                            <a href="#">
+                                <i class="fa fa-envelope-o"></i>
+                                Email: abcd@xyz.com
+                            </a>
                         </div>
-                    </div> 
-                    <div class="col-lg-6 col-md-6">
+                        <div class="px-4">
+                            <a href="#">
+                                <i class="fa fa-phone"></i>
+                                Hotline: (+11) 1111 1111
+                            </a>
+                        </div>
+                    </div>
+                    @if($setting->instructor_enable == 1)
+                        <div class="col-lg-6 col-md-6">
+                            <div class="learning-business">
+                                <a href="{{ route('login') }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Login/Register To Become an Instructor">{{ __('frontstaticword.BecomeAnInstructor') }}</a>
+                            </div>
+                        </div>
+                    @endif
+                    <div class="col-lg-4 col-md-4s">
                         <div class="Login-btn">
                            <!--  <a href="#find" class="nav-search nav-wishlist"><i class="fa fa-search"></i></a> -->
-                            <a href="{{ route('register') }}" class="btn btn-primary" title="register">{{ __('frontstaticword.Signup') }}</a>
-                            <a href="{{ route('login') }}" class="btn btn-secondary" title="login">{{ __('frontstaticword.Login') }}</a>
+                            <a href="{{ route('login') }}" class="btn btn-secondary" title="login">
+                                <i class="fa fa-key"></i>
+                                {{ __('frontstaticword.Login') }}
+                            </a>
+                            <a href="{{ route('register') }}" class="btn btn-primary" title="register">
+                                <i class="fa fa-user"></i>
+                                {{ __('frontstaticword.Register') }}
+                            </a>
                         </div> 
                     </div>
+                </div>
                 @endguest
 
                 @auth

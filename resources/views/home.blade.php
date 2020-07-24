@@ -7,37 +7,39 @@
 <section id="categories-tab" class="categories-tab-main-block">
     <div class="container">
         <div class="row">
-        <div class="col-md-3">
-              <!-- <div class="logo">
-                            @php
-                                $setting = App\Setting::first();
-                            @endphp
+            <div class="col-md-4">
+                <div class="logo">
+                    @php
+                        $setting = App\Setting::first();
+                    @endphp
 
-                            @if($setting->logo_type == 'L')
-                                <a href="{{ url('/') }}" ><img src="{{ asset('images/logo/'.$setting->logo) }}" class="img-fluid" alt="logo"></a>
-                            @else()
-                                <a href="{{ url('/') }}"><b><div class="logotext">{{ $setting->project_title }}</div></b></a>
-                            @endif
-                        </div>
-                    </div> -->
-
-        </div>
-        <div class="col-md-9">
-            <div id="categories-tab-slider" class="categories-tab-block owl-carousel">
-            @php
-                $category = App\Categories::orderBy('position','ASC')->get();
-            @endphp
-            @foreach($category as $cat)
-                @if($cat->status == 1)
-                <div class="item categories-tab-dtl">
-                  <!--   <i class="fa {{ $cat->icon }}"></i> -->
-                    <a href="{{ route('category.page',$cat->id) }}" title="{{ $cat->title }}">{{ $cat->title }}</a>
+                    @if($setting->logo_type == 'L')
+                        <a href="{{ url('/') }}" ><img src="{{ asset('images/logo/'.$setting->logo) }}" class="img-fluid" alt="logo"></a>
+                    @else()
+                        <a href="{{ url('/') }}"><b><div class="logotext">{{ $setting->project_title }}</div></b></a>
+                    @endif
                 </div>
-                @endif
-            @endforeach
-        </div>
-        </div>
-
+            </div>
+            <div class="col-md-6">
+                <div id="categories-tab-slider" class="categories-tab-block owl-carousel">
+                    @php
+                        $category = App\Categories::orderBy('position','ASC')->get();
+                    @endphp
+                    @foreach($category as $cat)
+                        @if($cat->status == 1)
+                            <div class="item categories-tab-dtl">
+                                <!--   <i class="fa {{ $cat->icon }}"></i> -->
+                                <a href="{{ route('category.page',$cat->id) }}" title="{{ $cat->title }}">{{ $cat->title }}</a>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-md-2">
+                <a href="{{ route('register') }}" class="btn btn-primary" title="register">
+                    {{ __('frontstaticword.EnrollNow') }}
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -49,22 +51,27 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 <section id="home-background-slider" class="background-slider-block owl-carousel">
     <div class="item home-slider-img">
         @foreach($sliders as $slider)
-        @if($slider->status == 1)
-        <div id="home" class="home-main-block" style="background-image: url('{{ asset('images/slider/'.$slider['image']) }}')">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="home-dtl">
-                            <div class="home-heading text-white">{{ $slider['heading'] }}</div>
-                            <p class="text-white btm-10">{{ $slider['sub_heading'] }}</p>
-                            <p class="text-white btm-20">{{ $slider['detail'] }}</div>
-                            
+            @if($slider->status == 1)
+                <div id="home" class="home-main-block" style="background-image: url('{{ asset('images/slider/'.$slider['image']) }}')">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="home-dtl">
+                                    <p class="text-white">{{ $slider['sub_heading'] }}</p>
+                                    <div class="home-heading text-white">{{ $slider['heading'] }}</div>
+                                    <p class="text-white">{{ $slider['detail'] }}</p>
+                                    <a href="{{ route('register') }}" class="btn btn-primary" title="{{ __('frontstaticword.GetStarted') }}">
+                                        {{ __('frontstaticword.GetStarted') }}
+                                    </a>
+                                </div>
+                                <p class="text-white mb-0 mt-4">Access to all classes for $00.00/month</p>
+                                <p class="text-white">(Billed Annually)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        @endif
+                </div>
+            @endif
         @endforeach
     </div>
 </section>
@@ -80,17 +87,15 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
     <div class="container">
         <div class="row">
             @foreach($facts as $fact)
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-sm-6 border-right">
                 <div class="learning-work-block text-white">
                     <div class="row">
-                        <div class="col-lg-3 col-md-3">
+                        <div class="col-lg-9 col-md-9">
                             <div class="learning-work-icon">
                                 <i class="fa {{ $fact['icon'] }}"></i>
                             </div>
-                        </div>
-                        <div class="col-lg-9 col-md-9">
                             <div class="learning-work-dtl">
-                                <div class="work-heading">{{ $fact['heading'] }}</div>
+                                <div class="work-heading mb-3">{{ $fact['heading'] }}</div>
                                 <p>{{ $fact['sub_heading'] }}</p>
                             </div>
                         </div>
@@ -116,15 +121,15 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
             @endphp
             @if(isset($items))
             
-            <div class="col-lg-3">
+            <!-- <div class="col-lg-3">
                 <div class="learning-selection">
                     <div class="selection-heading">{{ $items['heading'] }}</div>
                     <p>{{ $items['sub_heading'] }}</p>
                 </div>
-            </div>
+            </div> -->
            
             @endif
-            <div class="col-lg-9">
+            <div class="col-lg-12">
                 <div class="learning-courses">
                     @php
                         $categories = App\CategorySlider::first();
@@ -193,16 +198,18 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
     <!-- <div class="recommendation-main-block  text-center" style="background-image: url('{{ asset('images/getstarted/'.$gets['image']) }}')"> -->
         <div class="container">
             <div class="row">
-            <div class="col-md-12">
-            <h3 class="text-white">{{ $gets['heading'] }}</h3>
-            <p class="text-white btm-20">{{ $gets['sub_heading'] }}</p>
-            @if($gets->button_txt == !NULL)
-            <div class="recommendation-btn text-white">
-                <a href="{{ url('/') }}" class="btn btn-primary " title="search">{{ $gets['button_txt'] }}</a>
+            <div class="col-md-8">
+                <h3 class="text-white mb-2">{{ $gets['heading'] }}</h3>
+                <p class="text-white btm-20">{{ $gets['sub_heading'] }}</p>
             </div>
-            @endif
+            <div class="col-md-4">
+                @if($gets->button_txt == !NULL)
+                    <div class="recommendation-btn text-white">
+                        <a href="{{ url('/') }}" class="btn btn-primary " title="search">{{ $gets['button_txt'] }}</a>
+                    </div>
+                @endif
             </div>
-            </div> 
+            </div>
         </div>
    <!--  </div> -->
     @endif

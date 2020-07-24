@@ -20,8 +20,14 @@
                             @endif
                         </div>
                         <div class="view-dtl">
-                            <div class="view-heading btm-10"><a href="{{ route('user.course.show',['id' => $c->id, 'slug' => $c->slug ]) }}">{{ str_limit($c['title'], $limit = 35, $end = '...') }}</a></div>
-                            <p class="btm-10"><a herf="#">by {{ $c->user['fname'] }}</a></p>
+                            <div class="view-heading">
+                                <a href="{{ route('user.course.show',['id' => $c->id, 'slug' => $c->slug ]) }}">
+                                    {{ str_limit($c['title'], $limit = 35, $end = '...') }}
+                                </a>
+                            </div>
+                            <p>
+                                by {{ $c->user['fname'] }}
+                            </p>
                             <div class="rating">
                                 <ul>
                                     <li>

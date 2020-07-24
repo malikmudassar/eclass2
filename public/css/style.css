@@ -105,7 +105,7 @@ h6 {
   font-size: 13px;
 }
 a {  
-  color: #ce041c;
+  color: #fff;
   font-size: 14px;
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -115,7 +115,7 @@ a {
 }
 a:hover, 
 a:focus {
-  color: #fff;
+  color: #ce041c;
   text-decoration: none;
 }
 a:active {
@@ -160,7 +160,7 @@ ul {
 }
 .btn-primary { 
   padding: 20px 25px;
-  background-color: #000000;
+  background-color: #ce041c;
   color: #FFF;
   font-size: 15px;
   font-weight: 400;
@@ -176,14 +176,14 @@ ul {
 }
 .btn-primary:hover {
   border: 1px solid transparent;
-  background-color: #ce041c;
+  background-color: #000000;
 }
 .btn-secondary { 
   padding: 15px 25px;
   background-color: #000000;
   color: #fff;
   font-size: 15px;
-  border: 1px solid #686F7A;
+  border: none;
   -webkit-transition: none;
   -moz-transition: none;
   transition: none;  
@@ -194,9 +194,8 @@ ul {
   transition: all 0.5s ease;
 }
 .btn-secondary:hover {
-  border: 1px solid #29303B;
   background-color: #ce041c;
-  color: #29303B;
+  color: #fff;
 }
 .btn-info { 
   padding: 10px 15px;
@@ -840,7 +839,7 @@ sup.redstar {
 /* ================================= */
 
 .learning-work-icon {
-    color: #ce041c;
+    color: #fff;
 }
 .learning-work-main-block {
 /*  background: linear-gradient(-45deg, #ce041c 0, #212529 100%);*/
@@ -852,7 +851,7 @@ background-color: #212529;
   font-weight: 500;
 }
 .learning-work-dtl p {
-  font-size: 15px;
+  font-size: 12px;
   margin-bottom: 2px;
 }
 .learning-work-dtl {
@@ -862,6 +861,14 @@ background-color: #212529;
   font-size: 45px;
   margin-left: 10px;
   margin-top: 8px;
+}
+
+.learning-work-main-block .row > div.border-right {
+  border-right: 1px solid #fff !important;
+}
+
+.learning-work-main-block .row > div.border-right:last-child {
+  border-right: 1px solid transparent !important;
 }
 
 @media (max-width: 767px) {
@@ -975,10 +982,10 @@ section#learning-courses {
 }
 .view-dtl {
   padding: 10px;
-  border: 1px solid #DEDFE0;
+  /* border: 1px solid #DEDFE0; */
   border-radius: 0;
-  height: 150px;
-  background-color: #212529;
+  height: 110px;
+  background-color: #fff;
   box-shadow: 0 0 1px 1px rgba(20,23,28,0.1), 0 3px 1px 0 rgba(20,23,28,0.1);
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -1018,16 +1025,16 @@ section#learning-courses {
 }
 .view-heading a {
   font-size: 16px;
-  color: #fff;
+  color: #000;
   font-weight: 500;
 }
 .view-dtl p {
-  font-size: 8px;
-  color: #fff;
+  font-size: 12px;
+  color: #000;
 }
 .view-dtl .rating ul li {
   display: inline-flex;
-  color: #fff;
+  color: #000;
   font-size: 14px;
   vertical-align: text-bottom;
 }
@@ -5953,7 +5960,7 @@ ul {
   width: 100%;
 }
 .view-img a img {
-  min-height: 200px;
+  min-height: 350px;
   max-height: 150px;
   object-fit: cover;
   width: 100%;
@@ -6083,13 +6090,17 @@ ul {
 }
 .view-dtl .rate {
   position: absolute;
-  top: 40%;
-  right: 5px;
+  top: 0%;
+  left: 0px;
 }
 .view-dtl .rate ul {
-  background: #FFF;
+  background: #C83232;
+  color: #fff;
   padding: 0 8px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+a:not([href]):not([tabindex]) {
+  color: #fff;
 }
 .img-wishlist {
   position: absolute;
@@ -6353,9 +6364,6 @@ input.razorpay-payment-button {
 }
 .purchase-history-course-img {
   width: 100px;
-}
-.view-heading {
-  height: 45px;
 }
 .notification-image img {
   width: 60px;
