@@ -1,2 +1,5 @@
 .env
 vendor
+public/files/instructor/
+public/images/instructor/
+public/images/user_img/
