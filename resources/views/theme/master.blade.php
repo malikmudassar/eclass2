@@ -17,6 +17,10 @@ $language = Session::get('changed_language'); //or 'english' //set the system la
 $rtl = array('ar','he','ur', 'arc', 'az', 'dv', 'ku'); //make a list of rtl languages
 ?>
 
+<script type="text/javascript">
+  const BASE_URL = {!! json_encode(url('/')) !!};
+</script>
+
 <html lang="en" @if (in_array($language,$rtl)) dir="rtl" @endif>
 <!-- <![endif]-->
 <!-- head -->

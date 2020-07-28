@@ -216,14 +216,98 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 </section>
 <!-- recommendations end -->
  <section class="video">
-<div class="container">
-  <h2>Our online classes</h2>
-
- <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-</div>
-</div>
+    <div class="container">
+        <h2>Our online classes</h2>
+        <!-- <img src="{{ asset('images/bg/professor.png') }}" alt="professor" class="img-fluid"> -->
+        <div class="watch-video">
+            <a href="{{ url('/') }}" class="btn btn-primary watch-btn" title="search">WATCH VIDEO</a>
+        </div>
+        <!-- <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+        </div> -->
+    </div>
 </section>
+
+<!-- Instructors -->
+@php
+    $instructor = App\Instructor::all();
+@endphp
+<section class="categories-main-block"> <!-- id="categories" class="categories-main-block" -->
+    <div class="container">
+        <div id="instructor-view-slider" class="student-view-slider-main-block owl-carousel">
+            @foreach($instructor as $instruc)
+            <div class="item instructor-view-block">
+                <div class="genre-slide-image protip">
+                    <div class="view-block">
+                        <div class="view-img">
+                            <a href="#"><img src="{{ asset('images/instructor/'.$instruc->image) }}" alt="course" class="img-fluid"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<!-- instructor-panel start -->
+@if( ! $instructor->isEmpty() )
+<section id="instructor-panel">
+    <div class="container px-0">
+        <h3 class="btm-30">{{ __('frontstaticword.OurMostPopularInstructors') }}</h3>
+        <div class="container">
+            <div class="row">
+                @foreach($instructor as $instruc)
+                    @if($instruc->status == 1)
+                        <div class="col-lg-6 block">
+                            <div class="item instructor-block">
+                                <ul>
+                                    <li><img src="{{ asset('images/instructor/'.$instruc['image']) }}" alt="blog"></li>
+                                    <li>
+                                        <h5 class="testimonial-heading m-0">{{ $instruc['fname'] }}</h5>
+                                        <p>{{ $instruc['email'] }}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+                <div class="col text-center">
+                    <a href="#" class="btn btn-primary more-btn" title="more">
+                        {{ __('frontstaticword.More') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
+
+<!-- testimonial start -->
+@php
+    $testi = App\Testimonial::all();
+@endphp
+@if( ! $testi->isEmpty() )
+<section id="testimonial" class="testimonial-main-block">
+    <div class="container">
+        <h3 class="btm-30 text-center">{{ __('frontstaticword.HomeTestimonial') }}</h3>
+        <div id="testimonial-slider" class="testimonial-slider-main-block owl-carousel">
+            
+            @foreach($testi as $tes)
+             @if($tes->status == 1)
+            <div class="item testimonial-block text-center">
+                <img src="{{ asset('images/testimonial/'.$tes['image']) }}" alt="blog">
+                <h5 class="testimonial-heading">{{ $tes['client_name'] }}</h5>
+                <p>{!! str_limit($tes->details , $limit = 300, $end = '...') !!}</p>
+            </div>
+             @endif
+            @endforeach
+        </div> 
+        
+    </div>
+</section>
+@endif
+
 <!-- Student start -->
 <section id="student" class="student-main-block">
     <div class="container">
@@ -905,32 +989,6 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 @endif
 
 <!-- categories end -->
-<!-- testimonial start -->
- @php
-    $testi = App\Testimonial::all();
-@endphp
-@if( ! $testi->isEmpty() )
-<section id="testimonial" class="testimonial-main-block">
-    <div class="container">
-        <h3 class="btm-30">{{ __('frontstaticword.HomeTestimonial') }}</h3>
-        <div id="testimonial-slider" class="testimonial-slider-main-block owl-carousel">
-            
-            @foreach($testi as $tes)
-             @if($tes->status == 1)
-            <div class="item testimonial-block">
-                <ul>
-                    <li><img src="{{ asset('images/testimonial/'.$tes['image']) }}" alt="blog"></li>
-                    <li><h5 class="testimonial-heading">{{ $tes['client_name'] }}</h5></li>
-                </ul>
-                <p>{!! str_limit($tes->details , $limit = 300, $end = '...') !!}</p>
-            </div>
-             @endif
-            @endforeach
-        </div> 
-        
-    </div>
-</section>
-@endif
 
 @php
     $trusted = App\Trusted::all();

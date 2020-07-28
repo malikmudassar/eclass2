@@ -43,7 +43,7 @@ return [
     'Password' => 'Password',
     'FeaturedCourses' => 'Featured Courses',
     'TopCategories' => 'Top categories',
-    'HomeTestimonial' => 'What our students have to say',
+    'HomeTestimonial' => 'What Student are saying',
     'Trusted' => 'Trusted by companies of all sizes',
     'NoRating' => 'No Rating',
     'rating' => 'Rating',
@@ -263,4 +263,6 @@ return [
     'Register' => 'Register',
     'EnrollNow' => 'Enroll Now',
     'GetStarted' => 'Get Started',
+    'OurMostPopularInstructors' => 'Our Most Popular Instructors',
+    'More' => 'More',
 ];

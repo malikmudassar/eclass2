@@ -132,8 +132,8 @@
 // Testimonial-Slider  
     $("#testimonial-slider").owlCarousel({
       loop: true,
-      items: 3,
-      dots: false,
+      items: 1,
+      dots: true,
       nav: true,      
       autoplayTimeout: 10000,
       smartSpeed: 2000,
@@ -143,27 +143,26 @@
       margin: 20,
       autoplay: true,
       slideSpeed: 600,
-      navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+      navText: [
+        '<img src="'+BASE_URL+'/images/icons/prev.png" alt="previous">',
+        '<img src="'+BASE_URL+'/images/icons/next.png" alt="next">'
+      ],
       responsive: {
         0: {
             items: 1,
-            nav: false,
-            dots: false,
+            nav: false
         },
         600: {
             items: 1,
             nav: false,
-            dots: false,
         },
         768: {
-            items: 2,
-            nav: false,
-            dots: false,
+            items: 1,
+            nav: false
         },
         1100: {
-            items: 3,
-            nav: true,
-            dots: false,
+            items: 1,
+            nav: true
         }
       }
     });
@@ -611,6 +610,54 @@
             dots: false,
         }
       }
+    });
+    console.log(BASE_URL);
+    $("#instructor-view-slider").owlCarousel({
+      loop: true,
+      items: 5,
+      dots: false,
+      nav: true,      
+      autoplayTimeout: 10000,
+      smartSpeed: 2000,
+      autoHeight: false,
+      touchDrag: true,
+      mouseDrag: true,
+      margin: 10,
+      autoplay: true,
+      slideSpeed: 600,
+      navText: ['<img src="'+BASE_URL+'/images/icons/prev.png" alt="previous">', '<img src="'+BASE_URL+'/images/icons/next.png" alt="next">'],
+      responsive: {
+        0: {
+            items: 1,
+            nav: true,
+            dots: false,
+        },
+        400: {
+            items: 2,
+            nav: true,
+            dots: false,
+        },
+        600: {
+            items: 2,
+            nav: true,
+            dots: false,
+        },
+        768: {
+            items: 3,
+            nav: true,
+            dots: false,
+        },
+        1100: {
+            items: 4,
+            nav: true,
+            dots: false,
+        }
+      }
+    });
+
+    $('#instructor-view-slider').find('.owl-nav').removeClass('disabled');
+    $('#instructor-view-slider').on('changed.owl.carousel', function(event) {
+      $(this).find('.owl-nav').removeClass('disabled');
     });
 
 /* ================================= */

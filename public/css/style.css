@@ -1145,16 +1145,24 @@ section#learning-courses {
   padding: 50px 0 20px;
 }
 .testimonial-slider-main-block.owl-carousel .owl-item .testimonial-block img {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   border-radius: 100%;
-  margin-right: 20px;
+  margin: 0 auto;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border: 2px solid white;
 } 
 .testimonial-block {
   background-color: #212529;
   color:#fff;
-  padding: 30px;
-  box-shadow: 0 0 1px 1px rgba(20,23,28,.1),
+  padding: 90px 30px 30px 30px;
+  box-shadow: 0 0 1px 1px rgba(20,23,28,.1);
+  width: 500px;
+  margin: 0 auto;
 }
 .testimonial-block:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
@@ -7770,35 +7778,46 @@ section.secdule{
     width: 30px;
 }
 .col-lg-4.lecture {
-    color: #fff;
-    background-color: #212529;
-            padding-top: 40px;
-    border: #000000;
-    border-style: solid;
-    border-width: 7px;
-    width: 30px;
+  color: #fff;
+  background-color: #212529;
+  padding-top: 40px;
+  border: #000000;
+  border-style: solid;
+  border-width: 7px;
+  width: 30px;
 }
 .col-lg-4.class {
-    background-color: #212529;
-   color: #fff;
-            padding-top: 40px;
-    border: #000000;
-    border-style: solid;
-    border-width: 7px;
-    width: 30px;
+  background-color: #212529;
+  color: #fff;
+  padding-top: 40px;
+  border: #000000;
+  border-style: solid;
+  border-width: 7px;
+  width: 30px;
 }
 section#border-recommendation {
-    background-color: #212529;
-    text-align: center;
-    padding-top: 20px;
-      padding-bottom: 20px;
+  background-color: #212529;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-section.video{
-
-text-align: center;
-padding-top: 30px;
-      padding-bottom: 30px;
+section.video {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #000000;
+  background-image: url('../images/bg/professor.png');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: bottom;
+}
+section.video .watch-btn {
+  margin-top: 350px;
+  margin-bottom: 0px;
+  background-color: transparent;
+  border: 0.5px solid #ffffff52;
+  padding: 10px 40px;
+  letter-spacing: 2px;
 }
 section#student {
     background-color: #000000;
@@ -7806,4 +7825,94 @@ section#student {
 #learning-work 
 {
 padding:40px !important;
+}
+#testimonial .owl-carousel .owl-nav button.owl-next,
+#testimonial .owl-carousel .owl-nav button.owl-prev,
+#instructor-view-slider.owl-carousel .owl-nav button.owl-next,
+#instructor-view-slider.owl-carousel .owl-nav button.owl-prev {
+  background-color: transparent;
+}
+
+#instructor-view-slider .view-img a img {
+  min-height: 200px;
+  max-height: 150px;
+}
+
+#instructor-panel {
+  background-color: #000;
+  padding: 50px 0px;
+}
+
+#instructor-panel img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+#instructor-panel .row .block {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#instructor-panel .row .block:nth-child(odd) {
+  padding-right: 10px;
+}
+
+#instructor-panel .row .block:nth-child(even) {
+  padding-left: 10px;
+}
+
+#instructor-panel .testimonial-block ul li+li {
+  vertical-align: top;
+  padding-top: 15px;
+}
+
+#instructor-panel .more-btn {
+  padding: 10px 40px;
+}
+
+#testimonial .owl-carousel .owl-stage-outer {
+  padding-top: 50px;
+}
+
+.instructor-block {
+  background-color: #212529;
+  color:#fff;
+  padding: 30px;
+  box-shadow: 0 0 1px 1px rgba(20,23,28,.1);
+}
+.instructor-block:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+.instructor-block ul li {
+  display: inline-block;
+}
+.instructor-block ul li+li {
+  vertical-align: top;
+  padding-top: 25px;
+}
+.instructor-block ul li .instructor-a {
+  background-color: rgba(104, 111, 122);
+  color: #FFF;
+  text-transform: uppercase;
+  border-radius: 100%;
+  border: 1px solid rgba(104, 111, 122);
+  font-size: 20px;
+  padding: 25px 30px;
+}
+
+#testimonial .owl-dots {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#testimonial .owl-carousel button.owl-dot {
+  background: #fff;
+}
+
+#testimonial .owl-dot.active {
+  background: #ce041c !important;
+  width: 30px;
+  border-radius: 5px;
 }
