@@ -265,4 +265,12 @@ return [
     'GetStarted' => 'Get Started',
     'OurMostPopularInstructors' => 'Our Most Popular Instructors',
     'More' => 'More',
+    'ScheduleAppointment' => 'Schedule Appointment',
+    'YourName' => 'Your Name',
+    'YourEmail' => 'Your Email',
+    'Service' => 'Select Your Service',
+    'Phone' => 'Your Phone Number',
+    'SubmitNow' => 'Submit Now',
+    'E-mail' => 'E-mail',
+    'Subscribe' => 'SUBSCRIBE',
 ];

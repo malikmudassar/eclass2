@@ -308,8 +308,141 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 </section>
 @endif
 
+<section id="faq-and-appoinment">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="mt-5 btm-20">{{ __('frontstaticword.Frequently Asked Questions') }}</h3>
+                <div class="card my-3">
+                    <div class="card-header" id="headingOne">
+                      <h5 class="mb-0 float-left">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit ?
+                      </h5>
+                      <button class="btn btn-link float-right minus-btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0 float-left">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit ?
+                        </h5>
+                        <button class="btn btn-link float-right plus-btn" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim 
+                      </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0 float-left">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit ?
+                        </h5>
+                        <button class="btn btn-link float-right minus-btn" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0 float-left">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit ?
+                        </h5>
+                        <button class="btn btn-link float-right minus-btn" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="mb-0 float-left">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit ?
+                        </h5>
+                        <button class="btn btn-link float-right minus-btn" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="mt-5 btm-20">{{ __('frontstaticword.ScheduleAppointment') }}</h3>
+                <div class="card">
+                    <div class="appointment-block">
+                        <form class="appointment-form" method="POST" action="#">
+                            @csrf
+                            <div class="form-group">
+                                <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" id="name" placeholder="{{ __('frontstaticword.YourName') }}">
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" id="email" placeholder="{{ __('frontstaticword.YourEmail') }}">
+                                @if($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control{{ $errors->has('service') ? ' is-invalid' : '' }}" name="service" value="{{ old('service') }}" id="service" placeholder="{{ __('frontstaticword.Service') }}">
+                                @if($errors->has('service'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('service') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" id="phone" placeholder="{{ __('frontstaticword.Phone') }}">
+                                @if ($errors->has('phone'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <button type="submit" title="Submit Now" class="btn btn-primary submit-now-btn">
+                                {{ __('frontstaticword.SubmitNow') }}
+                                <i class="fa fa-long-arrow-right"></i>
+                                <!-- <i class="fa fa-lock" aria-hidden="true"></i> -->
+                            </button> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Student start -->
-<section id="student" class="student-main-block">
+<!-- <section id="student" class="student-main-block">
     <div class="container">
         @php
             $cor = App\Course::all();
@@ -369,7 +502,6 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
                                                 <div class="pull-left">{{ __('frontstaticword.NoRating') }}</div>
                                             @endif
                                         </li>
-                                        <!-- overall rating-->
                                         <?php 
                                         $learn = 0;
                                         $price = 0;
@@ -665,11 +797,11 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
         </div>
         @endif
     </div>
-</section>
+</section> -->
 <!-- Students end -->
 
 <!-- Bundle start -->
-<section id="student" class="student-main-block">
+<!-- <section id="student" class="student-main-block">
     <div class="container">
 
         @php
@@ -840,7 +972,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
         </div>
         @endif
     </div>
-</section>
+</section> -->
 <!-- Bundle end -->
 
 <!-- Zoom start -->
@@ -965,7 +1097,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
     $topcats = App\Categories::orderBy('position', 'ASC')->get();
 @endphp
 @if(!$topcats->isEmpty())
-<section id="categories" class="categories-main-block">
+<!-- <section id="categories" class="categories-main-block">
     <div class="container">
         
         <h3 class="categories-heading btm-30">{{ __('frontstaticword.TopCategories') }}</h3>
@@ -985,7 +1117,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
             @endforeach
         </div>
     </div>
-</section>
+</section> -->
 @endif
 
 <!-- categories end -->
@@ -1038,7 +1170,15 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
     (function($) {
       "use strict";
         $(function() {
-           $( "#home-tab" ).trigger( "click" );
+            $( "#home-tab" ).trigger( "click" );
+            $('.collapse').on('hidden.bs.collapse', function () {
+                $(this).closest(".card").find("i").removeClass("fa-plus").addClass("fa-minus");
+                $(this).closest(".card").find("button").removeClass("plus-btn").addClass("minus-btn");
+            });
+            $('.collapse').on('shown.bs.collapse', function () {
+                $(this).closest(".card").find("i").addClass("fa-plus").removeClass("fa-minus");
+                $(this).closest(".card").find("button").addClass("plus-btn").removeClass("minus-btn");
+            });
         });
     })(jQuery);
 

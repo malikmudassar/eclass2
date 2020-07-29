@@ -1,6 +1,14 @@
 <footer id="footer" class="footer-main-block">
     <div class="container">
         <div class="footer-block">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="{{ __('frontstaticword.E-mail') }}" aria-label="{{ __('frontstaticword.E-mail') }}" aria-describedby="email-addon">
+              <div class="input-group-append">
+                <span class="input-group-text" id="email-addon">
+                    {{ __('frontstaticword.Subscribe') }}
+                </span>
+              </div>
+            </div>
             <div class="row">
                 @php
                     $widgets = App\WidgetSetting::first();
@@ -81,7 +89,33 @@
             </div>
         </div>
     </div>
-    <hr>
+    <div class="social-icons">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>
+                            <a href="#" class="fa fa-facebook"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-twitter"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-instagram"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-youtube"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <p class="mr-3 mb-0">Payment Methods</p>
+                    <img src="{{ asset('images//payment/payment-methods.png') }}" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="horizontal-line">
     <div class="tiny-footer">
         <div class="container">
             <div class="row">
@@ -91,6 +125,7 @@
                             @php
                                 $logo = App\Setting::first();
                             @endphp
+                            <li>{{ $cpy_txt }}</li>
                             <li>
                                 @if($logo->logo_type == 'L')
                                     <a href="{{ url('/') }}" title="logo"><img src="{{ asset('images/logo/'.$logo->logo) }}" alt="logo" class="img-fluid" ></a>
@@ -98,18 +133,24 @@
                                     <a href="{{ url('/') }}"><b>{{ $logo->project_title }}</b></a>
                                 @endif
                             </li>
-
-                            <li>{{ $cpy_txt }}</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="copyright-social">
+                    <!-- <div class="copyright-social">
                         <ul>
-                            <li><a href="{{url('terms_condition')}}" title="Terms">{{ __('frontstaticword.Terms&Condition') }}</a></li> 
-                            <li><a href="{{url('privacy_policy')}}" title="Policy">{{ __('frontstaticword.PrivacyPolicy') }}</a></li>
+                            <li>
+                                <a href="{{url('terms_condition')}}" title="Terms">
+                                    {{ __('frontstaticword.Terms&Condition') }}
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="{{url('privacy_policy')}}" title="Policy">
+                                    {{ __('frontstaticword.PrivacyPolicy') }}
+                                </a>
+                            </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

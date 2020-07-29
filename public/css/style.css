@@ -1141,7 +1141,7 @@ section#learning-courses {
     /*===== Testimonial =====*/
 /* ================================= */
 .testimonial-main-block {
-  background-color: #000000;
+  background-color: #191C21;
   padding: 50px 0 20px;
 }
 .testimonial-slider-main-block.owl-carousel .owl-item .testimonial-block img {
@@ -1157,7 +1157,7 @@ section#learning-courses {
   border: 2px solid white;
 } 
 .testimonial-block {
-  background-color: #212529;
+  background-color: #272C33;
   color:#fff;
   padding: 90px 30px 30px 30px;
   box-shadow: 0 0 1px 1px rgba(20,23,28,.1);
@@ -7915,4 +7915,95 @@ padding:40px !important;
   background: #ce041c !important;
   width: 30px;
   border-radius: 5px;
+}
+
+#faq-and-appoinment {
+  background-color: #000;
+}
+
+#faq-and-appoinment .card, #faq-and-appoinment .card .card-header {
+  background-color: #272C33;
+  border: 1px solid #272C33;
+  border-radius: 0px 0px;
+}
+
+#faq-and-appoinment .card .card-body {
+  color: #fff;
+}
+
+.plus-btn {
+  background-color: #ce041c;
+  border: 1px solid #ce041c;
+}
+
+.minus-btn {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+#faq-and-appoinment .card .card-header button {
+  color: #fff;
+  border-radius: 0px;
+}
+
+.plus-btn:hover {
+  background-color: #ce041c;
+  border: 1px solid #ce041c;
+}
+
+.appointment-block {
+  padding: 30px;
+}
+
+.appointment-form .form-control {
+  padding: 10px 20px;
+  border-radius: 0px;
+  border: 1px solid #707070;
+  background: transparent;
+}
+
+.submit-now-btn {
+  padding: 10px 20px;
+  border-radius: 0;
+}
+
+#footer .input-group {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+#footer .input-group input {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: transparent;
+  border: 3px solid #707070;
+  padding-left: 25px;
+  border-right: none;
+}
+
+#footer .input-group span.input-group-text {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #ce041c;
+  border: 1px solid #ce041c;
+  color: #fff;
+}
+
+.horizontal-line {
+  margin: 0;
+  border-top: 1px solid #707070;
+}
+
+#footer .social-icons {
+  padding: 20px 20px 30px;
+}
+
+#footer .social-icons ul li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+#footer .social-icons p {
+  color: #fff;
 }
